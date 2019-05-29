@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1020"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;set prjpath $env(PROJECT_DIR)&#10;set prdname $env(PRODUCT_NAME)&#10;set libprefix $env(EXECUTABLE_PREFIX)&#10;set libpath $env(TARGET_BUILD_DIR)&#10;set libname $env(EXECUTABLE_NAME)&#10;#&#x8d8a;&#x72f1;&#x8bbe;&#x5907;&#x7684;IP&#x5730;&#x5740;&#10;set devip &quot;172.19.212.21&quot;  &#10;&#10;#&#x62f7;&#x8d1d;&#x52a8;&#x6001;&#x5e93;&#x5230;&#x8bbe;&#x5907;&#x5bf9;&#x5e94;&#x7684;&#x76ee;&#x5f55;&#x4e0b;&#x53bb;&#x3002;&#10;spawn scp $libpath/$libname root@$devip:/Library/MobileSubstrate/DynamicLibraries/&#10;expect {&#10;&quot;*assword&quot; {set timeout 30; send &quot;alpine\r&quot;;}&#10;&quot;yes/no&quot; {send &quot;yes\r&quot;; exp_continue;}&#10;}&#10;expect eof&#10;&#10;#&#x62f7;&#x8d1d;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x5230;&#x8bbe;&#x5907;&#x5bf9;&#x5e94;&#x7684;&#x76ee;&#x5f55;&#x4e0b;&#x53bb;&#xff0c;&#x6ce8;&#x610f;&#x8fd9;&#x91cc;&#x7684;&#x914d;&#x7f6e;&#x6587;&#x4ef6;&#x7684;&#x8def;&#x5f84;&#x3002;&#10;spawn scp $prjpath/$libprefix$prdname.plist root@$devip:/Library/MobileSubstrate/DynamicLibraries/&#10;expect {&#10;&quot;*assword&quot; {set timeout 30; send &quot;alpine\r&quot;;}&#10;&quot;yes/no&quot; {send &quot;yes\r&quot;; exp_continue;}&#10;}&#10;&#10;expect eof&#10;&#10;"
+               shellToInvoke = "/usr/bin/expect">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "20D2BD55229E419F00AF8E18"
+                     BuildableName = "libYSCameraInjectTest.dylib"
+                     BlueprintName = "YSCameraInjectTest"
+                     ReferencedContainer = "container:YSCameraInjectTest.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "20D2BD55229E419F00AF8E18"
+               BuildableName = "libYSCameraInjectTest.dylib"
+               BlueprintName = "YSCameraInjectTest"
+               ReferencedContainer = "container:YSCameraInjectTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "20D2BD55229E419F00AF8E18"
+            BuildableName = "libYSCameraInjectTest.dylib"
+            BlueprintName = "YSCameraInjectTest"
+            ReferencedContainer = "container:YSCameraInjectTest.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "20D2BD55229E419F00AF8E18"
+            BuildableName = "libYSCameraInjectTest.dylib"
+            BlueprintName = "YSCameraInjectTest"
+            ReferencedContainer = "container:YSCameraInjectTest.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

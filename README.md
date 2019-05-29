@@ -9,7 +9,7 @@
 
 3. 将XCode中工程左上角的`Set the active scheme` 设置为 `Generic iOS Device`。
 
-4. 点击构建工程！
+4. 点击构建工程！整个过程不需要联机。
 
 5. 打开越狱设备上的相机应用， 看看那个拍照按钮有变换吗？
 

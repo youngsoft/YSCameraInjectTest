@@ -13,3 +13,4 @@
 
 5. 打开越狱设备上的相机应用， 看看那个拍照按钮有变换吗？
 
+![演示图](https://upload-images.jianshu.io/upload_images/1432482-37324bb9185384c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
